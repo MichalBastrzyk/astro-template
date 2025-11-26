@@ -1,29 +1,30 @@
 ---
-import { ClientRouter } from "astro:transitions"
+import { ClientRouter } from "astro:transitions";
 
-import "@/styles/global.css"
+import "@/styles/global.css";
+import { SITE_DATA } from "@/config";
 
 interface Props {
-  title: string
+	title?: string;
+	description?: string;
 }
 
-const { title } = Astro.props
+const { title = SITE_DATA.title, description = SITE_DATA.description } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="Premium Women's Clothing" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
-    <ClientRouter />
-
-    <link rel="sitemap" href="/sitemap-index.xml" />
-  </head>
-  <body>
-    <slot />
-  </body>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content={description}>
+		<meta name="viewport" content="width=device-width">
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+		<meta name="generator" content={Astro.generator}>
+		<title>{title}</title>
+		<ClientRouter/>
+		<link rel="sitemap" href="/sitemap-index.xml">
+	</head>
+	<body>
+		<slot/>
+	</body>
 </html>
