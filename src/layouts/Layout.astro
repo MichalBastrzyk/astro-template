@@ -65,6 +65,8 @@ const ogImageURL = new URL(image, Astro.site);
 		<!-- Canonical & Sitemap -->
 		<link rel="canonical" href={canonicalURL}>
 		<link rel="sitemap" href="/sitemap-index.xml">
+		<!-- Referrer Policy -->
+		<meta name="referrer" content="strict-origin-when-cross-origin">
 
 		<!-- Open Graph / Facebook -->
 		<meta property="og:type" content="website">
@@ -83,6 +85,18 @@ const ogImageURL = new URL(image, Astro.site);
 
 		<!-- View Transitions -->
 		<ClientRouter/>
+
+		<!-- Theme Color -->
+		<meta
+			name="theme-color"
+			content={SITE_DATA.themeColor.light}
+			media="(prefers-color-scheme: light)"
+		>
+		<meta
+			name="theme-color"
+			content={SITE_DATA.themeColor.dark}
+			media="(prefers-color-scheme: dark)"
+		>
 	</head>
 	<body>
 		<slot/>

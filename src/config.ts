@@ -13,4 +13,9 @@ export const SITE_DATA = {
 		youtube: "https://youtube.com/your_youtube_channel",
 		facebook: "https://facebook.com/your_facebook_page",
 	},
+
+	themeColor: {
+		light: "#ffffff",
+		dark: "#ffffff",
+	},
 } as const;
