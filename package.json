@@ -9,8 +9,7 @@
 		"astro": "astro",
 		"format": "biome format --write",
 		"lint": "biome lint --write",
-		"check": "biome check --write",
-		"optimize-og": "bun run src/scripts/optimize-og-image.ts"
+		"check": "biome check --write"
 	},
 	"dependencies": {
 		"@astrojs/react": "^4.4.2",
