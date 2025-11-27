@@ -1,16 +1,23 @@
 ## SEO 
 
 - [x] Sitemap
-- [ ] OpenGraph Images
-- [ ] JSON-LD (Organization + WebSite schemas)
-- [ ] Analytics Integration using partytown
-- [ ] SEO Component
-- [ ] RSS
-- [ ] Canonical URLs
+- [x] Canonical URLs
+- [x] Robots.txt
+- [x] Meta Robots
+- [ ] OpenGraph Images (social share preview)
+    - [x] Default OG Image and optimization of it
+    - [ ] Dynamic OG Images per page (using OG Image Generator)
+- [ ] JSON-LD (Organization, WebSite, Breadcrumbs)
+- [ ] Favicons & WebManifest (widoczne w Google Mobile)
+- [ ] RSS Feed
 
-## Styling
+## Performance & a11y
 
-- [ ] Fonts using Font Provider Astro API
+- [ ] Optimized Images
+- [ ] Local Fonts
+- [ ] Analytics (using Partytown)
+- [ ] Semantic HTML (H1-H6 structure validation)
+- [ ] Custom 404 Page
 
 ## Content
 

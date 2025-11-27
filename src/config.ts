@@ -4,7 +4,7 @@ export const SITE_DATA = {
 	name: "Your Brand Name",
 	title: "Your Site Title",
 	description: "Your Site Description",
-	image: "/og-image.png",
+	image: "/og-image.webp",
 	socials: {
 		twitter: "https://twitter.com/your_twitter_handle",
 		github: "https://github.com/your_github_username",
