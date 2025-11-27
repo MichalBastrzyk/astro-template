@@ -1,0 +1,17 @@
+---
+import { SignInForm } from "@/components/auth/SignInForm";
+import Layout from "@/layouts/Layout.astro";
+
+// Redirect if already logged in
+if (Astro.locals.user) {
+	return Astro.redirect("/");
+}
+---
+
+<Layout title="Sign In">
+	<main
+		class="flex min-h-screen items-center justify-center bg-zinc-50 px-4 py-12 dark:bg-zinc-950"
+	>
+		<SignInForm client:load/>
+	</main>
+</Layout>

@@ -1,9 +1,14 @@
 ---
-export const prerender = true;
-
+import { SignOutButton } from "@/components/auth/SignOutButton";
 import Layout from "@/layouts/Layout.astro";
+import { createCaller } from "@/trpc/server";
+
+const caller = await createCaller(Astro.request.headers);
+const result = await caller.test.protectedTest();
 ---
 
-<Layout title="Home Page">
-	<h1>Astro</h1>
+<Layout title="User Management">
+	Session: {result}
+
+	<SignOutButton client:idle/>
 </Layout>
